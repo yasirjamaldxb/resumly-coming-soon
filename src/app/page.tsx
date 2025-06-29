@@ -7,7 +7,7 @@ import { useAnalytics } from '../hooks/usePostHog';
 import { useEffect } from 'react';
 
 export default function Home() {
-  const { trackPageView, trackEvent } = useAnalytics();
+  const { trackPageView } = useAnalytics();
 
   useEffect(() => {
     // Track page view when component mounts
