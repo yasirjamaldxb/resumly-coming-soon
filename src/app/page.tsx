@@ -2,106 +2,114 @@
 
 import Logo from '@/components/Logo';
 import EmailForm from '@/components/EmailForm';
+import SocialLinks from '@/components/SocialLinks';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Header */}
-      <header className="pt-8 pb-4">
-        <div className="max-w-6xl mx-auto px-6">
+      <header className="pt-6 sm:pt-8 pb-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Logo />
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+      <main className="py-8 sm:py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           {/* Hero Section */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="max-w-4xl mx-auto mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Build your{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span 
+                className="bg-clip-text text-transparent bg-gradient-to-r"
+                style={{ 
+                  backgroundImage: 'linear-gradient(to right, #4667B0, #5a7bc0)' 
+                }}
+              >
                 ATS-friendly
               </span>{' '}
               resume in minutes
             </h1>
-            
-            <p className="text-xl text-gray-600 mb-4 font-light">
-              Beat the bots and reach real recruiters with Resumly.
-            </p>
-            
-            <p className="text-lg text-gray-500 mb-12">
-              Our smart formatting guarantees that your resume passes applicant tracking systems and gets noticed. Join the waitlist today.
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed">
+              Resumly helps you create recruiter optimised resumes that sail through 
+              applicant tracking systems and land you more interviews.
             </p>
           </div>
 
-          {/* Email Form */}
-          <div className="mb-20">
+          {/* Email Form - Made Prominent */}
+          <div className="mb-16 sm:mb-20">
             <EmailForm />
           </div>
 
-          {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-xl p-6 border border-gray-200">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          {/* Features Section */}
+          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-16">
+            <div className="text-center">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <svg 
+                  className="w-10 h-10" 
+                  fill="none" 
+                  stroke="#4667B0" 
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">ATS Optimized</h3>
-              <p className="text-gray-600 text-sm">Pass through applicant tracking systems with confidence</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">ATS Optimized</h3>
+              <p className="text-sm sm:text-base text-gray-600">
+                Built specifically to pass through applicant tracking systems used by recruiters
+              </p>
             </div>
-            
-            <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-xl p-6 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+
+            <div className="text-center">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <svg 
+                  className="w-10 h-10" 
+                  fill="none" 
+                  stroke="#4667B0" 
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Lightning Fast</h3>
-              <p className="text-gray-600 text-sm">Create professional resumes in just minutes</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Lightning Fast</h3>
+              <p className="text-sm sm:text-base text-gray-600">
+                Create professional resumes in minutes, not hours. No design skills required
+              </p>
             </div>
-            
-            <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-xl p-6 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+
+            <div className="text-center">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <svg 
+                  className="w-10 h-10" 
+                  fill="none" 
+                  stroke="#4667B0" 
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Smart Formatting</h3>
-              <p className="text-gray-600 text-sm">AI-powered layout ensures maximum readability</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Smart Formatting</h3>
+              <p className="text-sm sm:text-base text-gray-600">
+                AI-powered suggestions ensure your experience is presented in the best way possible
+              </p>
             </div>
+          </div>
+
+          {/* Social Links */}
+          <SocialLinks />
+
+          {/* Footer */}
+          <div className="mt-16 pt-8 border-t border-gray-200">
+            <p className="text-gray-500 text-sm">
+              © 2025 Resumly. All rights reserved.
+            </p>
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="py-12">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-sm text-gray-500 mb-4">Follow us for updates</p>
-          <div className="flex justify-center space-x-4">
-            <a href="https://www.instagram.com/resumlyapp/" className="text-gray-400 hover:text-pink-500 transition-colors">
-              <span className="sr-only">Instagram</span>
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.017 0C8.396 0 7.989.013 7.041.048 6.094.082 5.52.26 5.012.525a5.336 5.336 0 00-1.925 1.254A5.336 5.336 0 00.525 5.012C.26 5.52.082 6.094.048 7.041.013 7.989 0 8.396 0 12.017s.013 4.028.048 4.976c.034.947.212 1.521.477 2.029.263.78.61 1.44 1.254 1.925a5.336 5.336 0 001.925 1.254c.508.265 1.082.443 2.029.477.948.035 1.355.048 4.976.048s4.028-.013 4.976-.048c.947-.034 1.521-.212 2.029-.477a5.336 5.336 0 001.925-1.254 5.336 5.336 0 001.254-1.925c.265-.508.443-1.082.477-2.029.035-.948.048-1.355.048-4.976s-.013-4.028-.048-4.976c-.034-.947-.212-1.521-.477-2.029a5.336 5.336 0 00-1.254-1.925A5.336 5.336 0 0018.988.525c-.508-.265-1.082-.443-2.029-.477C16.011.013 15.604 0 12.017 0z"/>
-              </svg>
-            </a>
-            <a href="https://www.tiktok.com/@resumlyapp" className="text-gray-400 hover:text-gray-900 transition-colors">
-              <span className="sr-only">TikTok</span>
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
-              </svg>
-            </a>
-            <a href="https://www.youtube.com/@ResumlyApp" className="text-gray-400 hover:text-red-500 transition-colors">
-              <span className="sr-only">YouTube</span>
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-              </svg>
-            </a>
-          </div>
-          <p className="text-xs text-gray-400 mt-6">© 2025 Resumly. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 }
