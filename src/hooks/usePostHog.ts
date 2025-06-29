@@ -3,11 +3,11 @@ import { usePostHog } from 'posthog-js/react'
 export function useAnalytics() {
   const posthog = usePostHog()
 
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+  const trackEvent = (eventName: string, properties?: Record<string, string | number | boolean>) => {
     posthog?.capture(eventName, properties)
   }
 
-  const identifyUser = (userId: string, properties?: Record<string, any>) => {
+  const identifyUser = (userId: string, properties?: Record<string, string | number | boolean>) => {
     posthog?.identify(userId, properties)
   }
 
