@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { trackServerEvent } from '../../../lib/posthog-server';
 
 // Keys for persistent storage
 const EMAILS_SET_KEY = 'resumly:emails';
