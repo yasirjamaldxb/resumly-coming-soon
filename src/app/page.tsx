@@ -3,8 +3,20 @@
 import Logo from '@/components/Logo';
 import EmailForm from '@/components/EmailForm';
 import SocialLinks from '@/components/SocialLinks';
+import { useAnalytics } from '../hooks/usePostHog';
+import { useEffect } from 'react';
 
 export default function Home() {
+  const { trackPageView, trackEvent } = useAnalytics();
+
+  useEffect(() => {
+    // Track page view when component mounts
+    trackPageView('landing_page');
+    
+    // Debug log to console (remove this in production)
+    console.log('PostHog initialized - tracking landing page view');
+  }, [trackPageView]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Header */}
